@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Icon Picker & Colorizer 🎨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">Saran No. 135</span>
+            <h1>🎨 SVG ICON COLORIZER</h1>
+            <p>Pilih ikon, ubah warnanya, dan salin kode SVG instan!</p>
+        </header>
+
+        <!-- Control Bar (Color, Size, Search) -->
+        <div class="control-bar">
+            <div class="control-item">
+                <label for="color-picker">Warna Ikon:</label>
+                <input type="color" id="color-picker" value="#38bdf8">
+            </div>
+
+            <div class="control-item">
+                <label for="size-slider">Ukuran: <span id="size-value">48px</span></label>
+                <input type="range" id="size-slider" min="24" max="96" value="48">
+            </div>
+
+            <div class="control-item search">
+                <input type="text" id="search-input" placeholder="🔍 Cari ikon (misal: star, heart)...">
+            </div>
+        </div>
+
+        <!-- Active Icon Preview Arena -->
+        <div class="preview-arena">
+            <div class="preview-icon-wrapper" id="preview-icon-container">
+                <!-- SVG aktif dirender di sini -->
+            </div>
+            <div class="preview-info">
+                <strong id="active-icon-name">Star Icon</strong>
+                <span id="active-icon-details">Size: 48px | Color: #38bdf8</span>
+            </div>
+        </div>
+
+        <!-- Icon Grid Collection -->
+        <div class="icon-grid" id="icon-grid">
+            <!-- Koleksi ikon dirender dinamis via JavaScript -->
+        </div>
+
+        <!-- Output Code & Copy Button -->
+        <div class="output-section">
+            <div class="output-header">
+                <span>Kode SVG:</span>
+                <button type="button" id="btn-copy" class="btn-copy">📋 Salin Kode SVG</button>
+            </div>
+            <textarea id="svg-code-output" class="code-output" readonly></textarea>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast hidden">Kode SVG berhasil disalin! 🚀</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
